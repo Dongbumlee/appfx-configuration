@@ -17,7 +17,7 @@ from appfx.configuration.env import load_environment_variables
 
 
 def test_package_imports() -> None:
-    assert configuration.__version__ == "0.1.0"
+    assert configuration.__version__ == "0.1.1"
     assert configuration.__all__ == ["__version__"]
 
 

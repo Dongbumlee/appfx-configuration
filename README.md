@@ -110,6 +110,23 @@ python -m build
 python -m twine check dist/*
 ```
 
+## Publishing
+
+This project is configured for PyPI Trusted Publishing through GitHub Actions,
+so releases do not require a PyPI API token in GitHub secrets or local terminals.
+
+Before the first publish, create a PyPI pending publisher for
+`appfx-configuration` with these values:
+
+- PyPI project name: `appfx-configuration`
+- Owner: `Dongbumlee`
+- Repository name: `appfx-configuration`
+- Workflow name: `publish.yml`
+- Environment name: `pypi`
+
+To publish a release, create and publish a GitHub release, or run the `Publish`
+workflow manually from GitHub Actions after the pending publisher is configured.
+
 ## Project layout
 
 - `src/appfx/configuration/` - package source
@@ -123,4 +140,3 @@ python -m twine check dist/*
 ## Next steps
 
 - Add full public API documentation.
-- Choose and document a release process before publishing to PyPI.
